@@ -3,7 +3,10 @@ function Pizza(toppings, size){
   this.toppings = toppings;
   this.size = size;
   }
-  pizza1 = new Pizza(["ham", "pineapple"], "medium");
+let toppings = [];
+
+  pizza1 = new Pizza();
+
   Pizza.prototype.cost = function() {
     let cost = 0
     let costSize = pizza1.size; 
@@ -27,8 +30,11 @@ function Pizza(toppings, size){
         $("div#cost").append("Please choose a pizza size")
     }};
 
+
+
+
+console.log(pizza1);
 $(document).ready(function(){
-  event.preventDefault(submit);
   const pepperoni = $("input#pepperoni").val();
   const sausage = $("input#sausage").val();
   const ham = $("input#ham").val();
@@ -36,12 +42,14 @@ $(document).ready(function(){
   const mushroom = $("input#meshroom").val();
   const pesto = $("input#pesto").val();
   const basil = $("input#basil").val();
-  $("button#submit").submit(function(){
-    $("input:checkbox[name=toppings]:checked").each(function() {
-      $("div#toppings").append("Your chosen toppings: " + )
-    });
-  });
 
+  $("button#submit").click(function(event){
+    event.preventDefault();
+    let selectedToppings = document.querySelectorAll("input:checkbox[name=toppings]:checked");
+    });
+    console.log(selectedToppings)
+  });
+  console.log(pizza1);
 
 
 
@@ -62,4 +70,3 @@ $(document).ready(function(){
   //   else {
   //     return("Please choose a pizza size");
   //   }
-  // };  
