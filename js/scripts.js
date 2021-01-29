@@ -10,21 +10,33 @@ function Pizza(toppings, size){
     switch (costSize) {
       case ("large"):
         cost = 24;
+        $("div#cost").append("Your total is $24")
         return cost;
         break;
       case ("medium"):
         cost = 17;
+        $("div#cost").append("Your total is $17")
         return cost;
         break;
       case ("small"):
         cost = 12;
+        $("div#cost").append("Your total is $12")
         return cost;
         break;
       default:
-        $("div#size").append("Please choose a pizza size")
+        $("div#cost").append("Please choose a pizza size")
     }};
 
+$(document).ready(function(){
+  const pepperoni = $("input#pepperoni").val();
+  const sausage = $("input#sausage").val();
+  const ham = $("input#ham").val();
+  const pineapple = $("input#pineapple").val();
+  const mushroom = $("input#meshroom").val();
+  const pesto = $("input#pesto").val();
+  const basil = $("input#basil").val();
 
+});
 
 
 

@@ -16,6 +16,18 @@
 
 _Select and customize your own pizza! The purpose of this application is to practice object-oriented javascript and object prototypes._
 
+## Specs
+```
+Describe: Pizza();
+Test 1: "It will create a pizza object with toppings and size properties."
+Code: pizza1.size; "medium"
+Expect: pizza1 = new Pizza([pepperoni, mushroom], medium).toEqual(pizza1 {toppings: ["pepperoni", "mushroom"], size: "medium"});
+
+Describe: Pizza.prototype.cost();
+Test 2: "It will calculate the cost of the pizza."
+Expect: pizza1.cost().toEqual(18);
+```
+
 ## Setup/Installation Requirements
 View directly:
 * You can view this directly on my <a href="https://mekinsie.github.io/choose-your-pizza" target="_blank">github pages</a>.

@@ -16,5 +16,4 @@ Expect: pizza1 = new Pizza([pepperoni, mushroom], medium).toEqual(pizza1 {toppin
 
 Describe: Pizza.prototype.cost();
 Test 2: "It will calculate the cost of the pizza."
-Code: 
-Expect: pizza1.cost().toEqual()
+Expect: pizza1.cost().toEqual(18)
