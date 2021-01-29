@@ -28,6 +28,7 @@ function Pizza(toppings, size){
     }};
 
 $(document).ready(function(){
+  event.preventDefault(submit);
   const pepperoni = $("input#pepperoni").val();
   const sausage = $("input#sausage").val();
   const ham = $("input#ham").val();
@@ -35,8 +36,11 @@ $(document).ready(function(){
   const mushroom = $("input#meshroom").val();
   const pesto = $("input#pesto").val();
   const basil = $("input#basil").val();
-
-});
+  $("button#submit").submit(function(){
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      $("div#toppings").append("Your chosen toppings: " + )
+    });
+  });
 
 
 
