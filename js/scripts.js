@@ -3,42 +3,39 @@ function Pizza(toppings, size){
   this.toppings = [];
   this.size = size;
 }
+pizza1 = new Pizza();
+console.log(pizza1);
+
 Pizza.prototype.cost = function() {
   let cost = 0
-  let costSize = pizza1.size; 
-  switch (costSize) {
-    case ("large"):
+  switch (pizza1.size) {
+    case ("Large"):
       cost = 24;
-      $("div#cost").append("Your total is $24")
-      return cost;
+      $("div#cost").append("Your total is $" + cost )
       break;
-    case ("medium"):
+    case ("Medium"):
       cost = 17;
-      $("div#cost").append("Your total is $17")
-      return cost;
+      $("div#cost").append("Your total is $" + cost)
       break;
-    case ("small"):
+    case ("Small"):
       cost = 12;
-      $("div#cost").append("Your total is $12")
-      return cost;
+      $("div#cost").append("Your total is $" + cost)
       break;
       default:
         $("div#cost").append("Please choose a pizza size")
 }};
 
-pizza1 = new Pizza();
-console.log(pizza1);
 
 
 //User Logic    
 $(document).ready(function(){
   $("button#submit").click(function(event){
     event.preventDefault();
-    const selectSize = $("#select-size option:selected").val();
-    pizza1.size = selectSize;
-    console.log(pizza1.size)
-    $("div#size-append").append("Your pizza size is: " + selectSize);
-    pizza1.cost;
+
+
+    pizza1.size = $("#select-size option:selected").val();
+    $("div#size-append").append("Your pizza size is: " + pizza1.size);
+    pizza1.cost();
     
     
     $("input:checkbox[name=toppings]:checked").each(function(){
