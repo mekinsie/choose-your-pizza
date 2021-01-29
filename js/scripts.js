@@ -3,9 +3,13 @@ function Pizza(toppings, size){
   this.toppings = toppings;
   this.size = size;
   }
-let toppings = [];
 
-  pizza1 = new Pizza();
+pizza1 = new Pizza();
+
+  // Pizza.prototype.addTopping = function(toppings) {
+  //   let toppings = $("input:checkbox[name=toppings]:checked").val();
+  //   pizza1.push(toppings);
+  // }
 
   Pizza.prototype.cost = function() {
     let cost = 0
@@ -31,6 +35,7 @@ let toppings = [];
     }};
 
 
+    let selectedToppings = []
 
 
 console.log(pizza1);
@@ -39,20 +44,30 @@ $(document).ready(function(){
   const sausage = $("input#sausage").val();
   const ham = $("input#ham").val();
   const pineapple = $("input#pineapple").val();
-  const mushroom = $("input#meshroom").val();
+  const mushroom = $("input#mushroom").val();
   const pesto = $("input#pesto").val();
   const basil = $("input#basil").val();
-
-  $("button#submit").click(function(event){
+  
+  let checkedToppings = []
+  $("button#submit").submit(function(event){
     event.preventDefault();
-    let selectedToppings = document.querySelectorAll("input:checkbox[name=toppings]:checked");
-    });
-    console.log(selectedToppings)
+    // $("input:checkbox[name=toppings]:checked").each(function(){
+    //   console.log(this)
+    //   checkedToppings.push(this.topping);
+    //   pizza1.toppings.push(checkedToppings);
+    let values = $("input:checkbox[name=toppings]:checked").map(function(){
+      return this.value;
+    }).get();
+    console.log(value);
+    })
   });
   console.log(pizza1);
+console.log(checkedToppings)
 
-
-
+let values = $("input:checkbox[name=toppings]:checked").map(function(){
+  return this.value;
+}).get();
+console.log(values);
   // Pizza.prototype.cost = function() {
   //   let cost = 0
   //   if (pizza1.size === "large") {
