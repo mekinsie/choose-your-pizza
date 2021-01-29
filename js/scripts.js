@@ -1,6 +1,6 @@
 // Business Logic
 function Pizza(toppings, size){
-  this.toppings = toppings;
+  this.toppings = [];
   this.size = size;
 }
 Pizza.prototype.cost = function() {
@@ -27,25 +27,25 @@ Pizza.prototype.cost = function() {
 }};
 
 pizza1 = new Pizza();
-      
+console.log(pizza1);
+
+
 //User Logic    
 $(document).ready(function(){
-  $("input#submit").submit(function(event){
+  $("button#submit").click(function(event){
     event.preventDefault();
-    const selectSize = $("#select-size").val();
-    pizza1.size.push(selectSize);
-    // const pepperoni = $("input#pepperoni").val();
-    // const sausage = $("input#sausage").val();
-    // const ham = $("input#ham").val();
-    // const pineapple = $("input#pineapple").val();
-    // const mushroom = $("input#mushroom").val();
-    // const pesto = $("input#pesto").val();
-    // const basil = $("input#basil").val();
-    let checkedToppings = []
+    const selectSize = $("#select-size option:selected").val();
+    pizza1.size = selectSize;
+    console.log(pizza1.size)
+    $("div#size-append").append("Your pizza size is: " + selectSize);
+    pizza1.cost;
+    
+    
     $("input:checkbox[name=toppings]:checked").each(function(){
-      checkedToppings.push($(this).val());
-      pizza1.toppings.push(checkedToppings);
+      pizza1.toppings.push($(this).val());
+      $("div#toppings").append("Your toppings are: " + pizza1.toppings[0] + ", " + pizza1.toppings[1]);
+    });
+
+
     });
   });
-});
-console.log(pizza1);
