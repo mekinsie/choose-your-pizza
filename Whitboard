@@ -1,5 +1,20 @@
 Object Constructors:
 
-Pizza (pepperoni, sausage, pineapple, ham, mushroom, size)
+function Pizza(toppings, size){
+this.toppings = toppings;
+this.size = size;
+}
 
 Pizza.prototype.cost
+
+Specs:
+
+Describe: Pizza();
+Test 1: "It will create a pizza object with toppings and size properties."
+Code: pizza1.size; "medium"
+Expect: pizza1 = new Pizza([pepperoni, mushroom], medium).toEqual(pizza1 {toppings: ["pepperoni", "mushroom"], size: "medium"})
+
+Describe: Pizza.prototype.cost();
+Test 2: "It will calculate the cost of the pizza."
+Code: 
+Expect: pizza1.cost().toEqual()
