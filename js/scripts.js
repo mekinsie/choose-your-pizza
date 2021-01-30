@@ -25,24 +25,25 @@ Pizza.prototype.cost = function() {
         $("div#cost").append("Please choose a pizza size")
 }};
 
+addToppings = function (){pizza1.toppings.forEach(function(topping){
+  $("span#toppings").append(topping + " ");
+  $("div#toppings-div").show();
+});
 
+}
 
 //User Logic    
 $(document).ready(function(){
   $("button#submit").click(function(event){
     event.preventDefault();
 
-
     pizza1.size = $("#select-size option:selected").val();
     $("div#size-append").append("Your pizza size is: " + pizza1.size);
     pizza1.cost();
     
-    
     $("input:checkbox[name=toppings]:checked").each(function(){
       pizza1.toppings.push($(this).val());
-      $("div#toppings").append("Your toppings are: " + pizza1.toppings[0] + ", " + pizza1.toppings[1]);
+    addToppings();
     });
-
-
     });
   });
