@@ -8,49 +8,55 @@
   <title>Choose Your Pizza</title>  
 </head>
 <body>
-  <div class="container">
-  <form>
-    <div id="pizza-size">
-      <label for="size">Size</label>
-      <select name="size" id="select-size">
-        <option id="small">Small</option>
-        <option id="medium">Medium</option>
-        <option id="large">Large</option>
-      </select>
-    </div>  
-    <div id="pizza-toppings">
-      <p><strong>Toppings:</strong></p>
-      <label for="pepperoni">Pepperoni</label>
-      <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
-      <br>
-      <label for="sausage">Sausage</label>
-      <input type="checkbox" id="sausage" name="toppings" value="sausage">
-      <br>
-      <label for="ham">Ham</label>
-      <input type="checkbox" id="ham" name="toppings" value="ham">
-      <br>
-      <label for="pineapple">Pineapple</label>
-      <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
-      <br>
-      <label for="mushroom">Mushroom</label>
-      <input type="checkbox" id="mushroom" name="toppings" value="mushroom">
-      <br>
-      <label for="pesto">Pesto</label>
-      <input type="checkbox" id="pesto" name="toppings" value="pesto">
-      <br>
-      <label for="basil">Basil</label>
-      <input type="checkbox" id="basil" name="toppings" value="basil">
+  <div class="big-box">
+    <div class="box">
+      <form>
+        <div id="pizza-size">
+          <label id="size-label" for="size">Size</label>
+          <br>
+          <select name="size" id="select-size">
+            <option id="small">Small</option>
+            <option id="medium">Medium</option>
+            <option id="large">Large</option>
+          </select>
+        </div>  
+        <br>
+        <div id="pizza-toppings">
+          <p id="title">Toppings:</p>
+          <label for="pepperoni">Pepperoni</label>
+          <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+          <br>
+          <label for="sausage">Sausage</label>
+          <input type="checkbox" id="sausage" name="toppings" value="sausage">
+          <br>
+          <label for="ham">Ham</label>
+          <input type="checkbox" id="ham" name="toppings" value="ham">
+          <br>
+          <label for="pineapple">Pineapple</label>
+          <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+          <br>
+          <label for="mushroom">Mushroom</label>
+          <input type="checkbox" id="mushroom" name="toppings" value="mushroom">
+          <br>
+          <label for="pesto">Pesto</label>
+          <input type="checkbox" id="pesto" name="toppings" value="pesto">
+          <br>
+          <label for="basil">Basil</label>
+          <input type="checkbox" id="basil" name="toppings" value="basil">
+        </div>
+        <br>
+        <button type="button" id="submit" value="submit">Submit</button>
+      </form>
     </div>
-    <button type="button" id="submit" value="submit">Submit</button>
-  </form>
-
-  <div id="toppings-div">
-<p>Your selected toppings are: <span id="toppings"></span></p>
+  </div>  
+  <div class="display">
+    <div id="toppings-div">
+      <p>Your selected toppings are: <span id="toppings"></span></p>
+    </div>
+    <div id="size-append"></div>
+    <br>
+    <div id="cost"></div>
   </div>
-  <div id="size-append"></div>
-
-  <div id="cost"></div>
-
 </div>
 </body>
 </html>

@@ -25,12 +25,12 @@ Pizza.prototype.cost = function() {
         $("div#cost").append("Please choose a pizza size")
 }};
 
-addToppings = function (){pizza1.toppings.forEach(function(topping){
-  $("span#toppings").append(topping + " ");
-  $("div#toppings-div").show();
-});
 
-}
+addToppings = function (){for(let i = 0; i < pizza1.toppings.length; i +=1){
+  $("span#toppings").append(pizza1.toppings[i] + " ");
+  $("div#toppings-div").show();
+};
+};
 
 //User Logic    
 $(document).ready(function(){

@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+body {
+  font-family: 'Concert One', cursive;
+}
+
 #toppings-div {
   display:none;
+}
+.big-box {
+  background-color: rgb(194, 30, 30);
+}
+.box {
+  margin-top: 100px;
+  margin-left: 25%;
+  color:white;
+  padding: 30px;
+}
+
+.display {
+  background-color: rgb(255, 210, 196);
+  width:100%;
+  Color: rgb(194, 1, 1);
+  text-align: center;
+  font-size: 25px;
+}
+#submit {
+  border-radius: 10px;
+}
+#submit:hover {
+  background-color: rgb(255, 203, 190);
+}
+
+#title, #size-label {
+  font-size: 35px;
+  color: rgb(88, 0, 0);
+}
+#select-size {
+  border-radius: 9px;
 }
