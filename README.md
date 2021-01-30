@@ -14,7 +14,7 @@
 
 ## Description
 
-_Select and customize your own pizza! The purpose of this application is to practice object-oriented javascript and object prototypes._
+_Select and customize your own pizza! The purpose of this application is to practice object-oriented javascript and object prototypes. When you select a pizza size and toppings, the price of the pizza will change._
 
 ## Specs
 ```
@@ -26,10 +26,6 @@ Expect: pizza1 = new Pizza([pepperoni, mushroom], medium).toEqual(pizza1 {toppin
 Describe: Pizza.prototype.cost();
 Test 2: "It will calculate the cost of the pizza."
 Expect: pizza1.cost.toEqual(18);
-
-Describe. Pizza.prototype.addTopping();
-Test 3: "It will add selected toppings to Pizza.toppings."
-Expect: pizza1.toppings.toEqual(Selected Toppings)
 ```
 
 ## Setup/Installation Requirements
@@ -61,7 +57,7 @@ $ code .
 
 ## Known Bugs
 
-* _No known bugs_
+* _Cost increases each time submit button is clicked._
 
 ## License
 
