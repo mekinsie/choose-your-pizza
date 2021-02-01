@@ -35,6 +35,7 @@ Pizza.prototype.cost = function(message) {
 $(document).ready(function(){
   $("button#submit").click(function(event){
     event.preventDefault();
+    pizza1.toppings = [];
     $("input:checkbox[name=toppings]:checked").each(function(){
       pizza1.toppings.push($(this).val());
     });
