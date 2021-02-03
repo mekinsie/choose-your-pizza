@@ -32,10 +32,16 @@ $(document).ready(function(){
     $("input:checkbox[name=toppings]:checked").each(function(){
       pizza1.toppings.push($(this).val());
     });
+
+    $("div#toppings-div").empty();
+    $("div#toppings-div").append("Number of Toppings: " + pizza1.toppings.length);
+    
     pizza1.size = $("#select-size option:selected").val();
     $("div#size-append").empty();
-    $("div#size-append").append("Your pizza size is: " + pizza1.size);
+    $("div#size-append").append("Pizza size: " + pizza1.size);
     
+
+
     let message = [];
     pizza1.cost(message);
     $("div#cost").empty();
