@@ -39,8 +39,6 @@ $(document).ready(function(){
     pizza1.size = $("#select-size option:selected").val();
     $("div#size-append").empty();
     $("div#size-append").append("Pizza size: " + pizza1.size);
-    
-
 
     let message = [];
     pizza1.cost(message);
