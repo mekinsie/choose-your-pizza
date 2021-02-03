@@ -29,11 +29,8 @@ Expect: pizza1.cost.toEqual(18);
 ```
 
 ## Setup/Installation Requirements
-View directly:
-* You can view this directly on my <a href="https://mekinsie.github.io/choose-your-pizza" target="_blank">github pages</a>.
-
 Download the repo:
-* Go to https://github.com/mekinsie/choose-your-pizza_
+* Go to https://github.com/mekinsie/choose-your-pizza
 * Navigate to and click the green <img src="code.PNG" alt="code" height="20"> button on middle upper right part of webpage.
 * Click on "Download ZIP"
 * Navigate to the downloaded zip and open it.
@@ -41,7 +38,7 @@ Download the repo:
 * Double-click on the HTML file to open it in your default browser.
 
 Clone the repo:
-* Go to https://github.com/mekinsie/choose-your-pizza_
+* Go to https://github.com/mekinsie/choose-your-pizza
 * Navigate to and click the green <img src="code.PNG" alt="code" height="20"> button on middle upper right part of webpage.
 * Copy the HTTPs address to your clipboard.
 * Open terminal or bash and navigate to the directory you wish to download the repo to.
@@ -57,7 +54,7 @@ $ code .
 
 ## Known Bugs
 
-* _Cost increases each time submit button is clicked._
+* _No known bugs_
 
 ## License
 
