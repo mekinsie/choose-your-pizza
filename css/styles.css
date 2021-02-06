@@ -1,30 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 body {
   font-family: 'Concert One', cursive;
+}
+#header {
+  text-align: center;
+  background-color:rgb(143, 0, 0);
+  color: rgb(246, 246, 246);
+  padding: 20px;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
 }
 .big-box {
   background-color: rgb(194, 30, 30);
 }
 .box {
-  margin-top: 100px;
   color:white;
-  padding: 30px;
+  padding: 60px;
   text-align: center;
+  padding-bottom: 80px;;
 }
-.display {
-  background-color: rgb(255, 210, 196);
-  width:100%;
-  Color: rgb(194, 1, 1);
-  text-align: center;
-  font-size: 25px;
-  padding-bottom: 70px;
-  padding-top: 50px;
+img {
+  float: right;
+  padding-right: 100px;
+  padding-bottom: 30px;
 }
 #submit {
   border-radius: 10px;
+  color: rgb(143, 0, 0);
+  background-color: white;
 }
 #submit:hover {
-  background-color: rgb(255, 203, 190);
+  background-color: rgb(163, 0, 0);
+  color: white;
 }
 #title, #size-label {
   font-size: 35px;
@@ -33,8 +41,32 @@ body {
 #select-size {
   border-radius: 9px;
 }
+#pizza-toppings {
+  font-size: 25px;
+}
+#select-size{
+  font-size: 20px;
+}
 .cost-menu {
   padding-left: 100px;
   padding-top: 50px;
+  padding-bottom: 50px;
   font-size: 20px;
+  background-color: rgb(246, 246, 246);
+  color: rgb(78, 0, 0);
+}
+.display {
+  background-color: white;
+  width:100%;
+  Color: rgb(194, 1, 1);
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 70px;
+  padding-top: 50px;
+}
+#cost {
+  font-size:40px;
+  font-weight: bolder;
+  color: rgb(179, 0, 0);
+  font-family: 'Fjalla One', sans-serif;
 }
