@@ -29,6 +29,8 @@ Expect: pizza1.cost.toEqual(18);
 ```
 
 ## Setup/Installation Requirements
+View this webpage directly via: https://mekinsie.github.io/choose-your-pizza/
+
 Download the repo:
 * Go to https://github.com/mekinsie/choose-your-pizza
 * Navigate to and click the green <img src="code.PNG" alt="code" height="20"> button on middle upper right part of webpage.
