@@ -1,47 +1,47 @@
 // Business Logic
-function Pizza(size){
-  this.toppings = [];
+function Pizza(size, toppings){
+  this.toppings = toppings;
   this.size = size;
+  this.cost = 0;
 }
 
-pizza1 = new Pizza();
-
-Pizza.prototype.cost = function(message) {
-  switch (pizza1.size) {
+Pizza.prototype.determineCost = function(message) {
+  switch (this.size) {
     case ("Large"):
-      cost = 24 + pizza1.toppings.length;
-      message.push("Your total is $" + cost)
+      this.cost = 24 + this.toppings.length;
+      message.push("Your total is $" + this.cost)
       break;
     case ("Medium"):
-      cost = 17 + pizza1.toppings.length;
-      message.push("Your total is $" + cost)
+      this.cost = 17 + this.toppings.length;
+      message.push("Your total is $" + this.cost)
       break;
     case ("Small"):
-      cost = 12 + pizza1.toppings.length;
-      message.push("Your total is $" + cost)
+      this.cost = 12 + this.toppings.length;
+      message.push("Your total is $" + this.cost)
       break;
     default:
       message.push("Please choose a pizza size")
-      }};
+  }
+  return this.cost;
+};
 
-//User Logic    
+//User Interface Logic    
 $(document).ready(function(){
-  $("button#submit").click(function(event){
+  $("form#pizza-form").submit(function(event){
     event.preventDefault();
-    pizza1.toppings = [];
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      pizza1.toppings.push($(this).val());
+    let size = $("#select-size option:selected").val();
+    let toppings = $("input:checkbox[name=toppings]:checked").map(function(){
+      return this.value
     });
 
+    let pizza1 = new Pizza(size,toppings);
     $("div#toppings-div").empty();
     $("div#toppings-div").append("Number of Toppings: " + pizza1.toppings.length);
-    
-    pizza1.size = $("#select-size option:selected").val();
     $("div#size-append").empty();
     $("div#size-append").append("Pizza size: " + pizza1.size);
-
-    let message = [];
-    pizza1.cost(message);
+    
+    let message = []; 
+    pizza1.determineCost(message);
     $("div#cost").empty();
     $("div#cost").append(message);
   });
